@@ -20,12 +20,16 @@ module.exports = {
           'light-gray': '#e5e5e5'
         },
         asuhe: {
-          'light':'#E3FDFD'
+          'light':'#e3fdfd',
+          'light-2': '#9ddfe4',
         }
       },
       maxWidth: {
         side: '14rem',
         '9/10': '90%'
+      },
+      fontWeight: {
+        light: 600,
       }
     }
   },

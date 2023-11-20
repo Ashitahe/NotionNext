@@ -42,10 +42,10 @@ const BlogPostListScroll = ({ posts = [], currentSearch }) => {
   const scrollTrigger = useCallback(throttle(() => {
     const scrollS = window.scrollY + window.outerHeight
     const clientHeight = targetRef ? (targetRef.current ? (targetRef.current.clientHeight) : 0) : 0
-    if (scrollS > clientHeight + 100) {
+    if (scrollS > clientHeight + 50) {
       handleGetMore()
     }
-  }, 500))
+  }, 100), [])
 
   // 监听滚动
   useEffect(() => {
@@ -53,7 +53,7 @@ const BlogPostListScroll = ({ posts = [], currentSearch }) => {
     return () => {
       window.removeEventListener('scroll', scrollTrigger)
     }
-  })
+  }, [])
 
   const targetRef = useRef(null)
   const { locale } = useGlobal()
