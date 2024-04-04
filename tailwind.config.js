@@ -29,7 +29,7 @@ module.exports = {
         '9/10': '90%'
       },
       fontWeight: {
-        light: 600,
+        light: 400,
       }
     }
   },
